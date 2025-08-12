@@ -183,7 +183,7 @@ flowchart TD
 
 ## ✅ Evaluation & Metrics
 - Reported metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix.
-- Use `classification_report` and `confusion_matrix` (scikit-learn) for per-class breakdown.
+- Use `classification_report` and `confusion_matrix` for per-class breakdown.
 - Visualize training with loss/accuracy plots and confusion matrix heatmaps.
 
 ---
@@ -205,24 +205,12 @@ flowchart TD
 ---
 
 ## 🤝 Acknowledgements
-This research was carried out at the **Indian Institute of Science (IISc), Bangalore**, under the guidance of **Prof. [Professor's Full Name]**. The project benefited from experimental infrastructure, lab recordings, and insightful domain expertise.
+This research was carried out at the **Indian Institute of Science (IISc), Bangalore**, under the guidance of **Prof. Susmita Dash**. The project benefited from experimental infrastructure, lab recordings, and insightful domain expertise.
 
 ---
 
-## 📜 License
-Include your preferred license (e.g., MIT, Apache-2.0). Example:
-```
-MIT License
-```
 
----
 
-## 🔁 Contact & Citation
-If you reuse part of this work or want collaboration, please contact:  
-**[Your Name]** — email: `your.email@domain.edu`  
-When citing this work, please reference the project repo and the IISc guidance.
-
----
 
 ## Appendix: Helpful Commands
 
@@ -237,6 +225,6 @@ S_db = librosa.power_to_db(S, ref=np.max)
 
 - Extract frames from video:
 ```bash
-ffmpeg -i input_video.mp4 -vf "fps=10" frames_dir/frame_%05d.jpg
+ffmpeg -i input_video.mp4 -vf "fps=30" frames_dir/frame_%05d.jpg
 ```
 #
