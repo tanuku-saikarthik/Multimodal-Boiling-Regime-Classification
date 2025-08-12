@@ -146,8 +146,10 @@ flowchart TD
   L --> M[Output Dense num_classes activation softmax]
   M --> N[Prediction Boiling Regime]
 
----
 
+```
+
+```mermaid
 flowchart TD
   V[Input Video mp4] --> FE[Frame Extraction and Sampling max 200 frames]
   FE --> Pre[Per-frame Preprocessing and Augmentation]
@@ -159,10 +161,7 @@ flowchart TD
   Q --> Class[LayerNorm -> Linear num_classes]
   Class --> Out[Softmax -> Boiling Regime Prediction]
 
-
-
----
-
+```
 ## 🧪 Training & Experimental Details
 - **Audio model**
   - Input size: spectrograms resized to (64, 128, 3).
