@@ -146,7 +146,6 @@ flowchart TD
   L --> M[Output Dense num_classes activation softmax]
   M --> N[Prediction Boiling Regime]
 
-
 ---
 
 flowchart TD
