@@ -1,7 +1,7 @@
 # 🔥 Multimodal Boiling Regime Classification (Audio + Video + Scalar Features)
 
 > **Novel Research Project** conducted at the **Indian Institute of Science (IISc), Bangalore**  
-> **Under the guidance of Prof. [Professor's Full Name]**  
+> **Under the guidance of Prof. Susmita Dash**  
 > Multimodal deep learning combining **audio**, **video**, and **scalar process features** to classify **boiling regimes**. Work prepared as a **research journal** and experimental study.
 
 ---
