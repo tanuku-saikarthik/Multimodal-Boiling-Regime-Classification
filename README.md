@@ -128,7 +128,7 @@ python video_model/evaluate_video.py --checkpoint video_model/checkpoints/video_
 ### 1) Audio → Spectrogram → EfficientNet + Tabular Fusion
 ```mermaid
 flowchart TD
-  A[Raw Audio (.wav / .flac)] --> B[Spectrogram Generation]
+  A[Raw Audio (.wav or .flac)] --> B[Spectrogram Generation]
   B --> C[Spec Augmentation]
   C --> D[Spec (64x128x3) Input]
   D --> E[EfficientNetB0 (pretrained, include_top=False)]
@@ -136,24 +136,22 @@ flowchart TD
   F --> G[Dropout + Dense Embedding]
 
   subgraph TAB [Tabular (Scalar) Path]
-    H[Scalar Features (T, We, ...)] --> I[StandardScaler]
-    I --> J[Dense(32) → BatchNorm → Dense(16)]
+    H[Scalar Features (T, We, etc.)] --> I[StandardScaler]
+    I --> J[Dense(32) -> BatchNorm -> Dense(16)]
   end
 
   G --> K[Fusion: Concatenate (Spec Embedding + Tabular Embedding)]
   J --> K
-  K --> L[Dense(64) → Dropout]
+  K --> L[Dense(64) -> Dropout]
   L --> M[Output Dense(num_classes, activation='softmax')]
   M --> N[Prediction: Boiling Regime]
-```
+
 
 ---
 
-### 2) Video → Frame Encoder (ResNet18) + Transformer Encoder
-```mermaid
 flowchart TD
   V[Input Video (.mp4)] --> FE[Frame Extraction / Sampling (max 200 frames)]
-  FE --> Pre[Per-frame Preprocessing & Augmentation]
+  FE --> Pre[Per-frame Preprocessing and Augmentation]
   Pre --> R[ResNet18 Frame Encoder (pretrained)]
   R --> Flatten[Project to 512-d per-frame embeddings]
   Flatten --> Pos[Add Positional Encoding]
@@ -161,7 +159,6 @@ flowchart TD
   T --> Q[Query token (learned) + MultiheadAttention Pooling]
   Q --> Class[LayerNorm -> Linear(num_classes)]
   Class --> Out[Softmax -> Boiling Regime Prediction]
-```
 
 ---
 
