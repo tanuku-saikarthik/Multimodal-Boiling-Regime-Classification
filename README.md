@@ -148,7 +148,7 @@ flowchart TD
 
 
 ```
-
+### 2) Video → Frame Encoder ResNet18 + Transformer Encoder
 ```mermaid
 flowchart TD
   V[Input Video mp4] --> FE[Frame Extraction and Sampling max 200 frames]
