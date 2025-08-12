@@ -29,7 +29,7 @@ Both models were developed as part of a novel research study at IISc and are des
 multimodal-boiling-classification/
 │
 ├── audio_model/
-│   ├── data/                       # spectrogram images, raw audio (if available), metadata.xlsx
+│   ├── data/                        
 │   ├── preprocess_audio.py         # audio -> spectrogram, augmentation
 │   ├── train_audio_tabular.py      # training script (Keras/TensorFlow)
 │   ├── models.py                   # model definition (EfficientNet + tabular fusion)
@@ -44,13 +44,9 @@ multimodal-boiling-classification/
 │   ├── evaluate_video.py           # evaluation & plotting
 │   └── checkpoints/
 │
-├── docs/
-│   ├── manuscript_draft.pdf        # research journal draft (optional)
-│   └── figures/
 │
-├── requirements.txt
-├── README.md                       # <-- you are editing this file
-└── LICENSE
+├── requirements.txt                      
+└── README.md 
 ```
 
 ---
