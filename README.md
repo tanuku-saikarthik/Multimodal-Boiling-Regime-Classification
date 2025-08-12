@@ -239,6 +239,4 @@ S_db = librosa.power_to_db(S, ref=np.max)
 ```bash
 ffmpeg -i input_video.mp4 -vf "fps=10" frames_dir/frame_%05d.jpg
 ```
-#   M u l t i m o d a l - B o i l i n g - R e g i m e - C l a s s i f i c a t i o n 
- 
- 
+#
